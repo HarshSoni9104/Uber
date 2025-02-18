@@ -21,6 +21,7 @@ module.exports.registerCaptain = async(req,res,next) => {
 
     const hashedPassword = await captainModel.hashPassword(password)
 
+
     const captain = await captainService.createCaptain({
         firstname: fullname.firstname,
         lastname: fullname.lastname,
