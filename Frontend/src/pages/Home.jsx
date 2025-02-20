@@ -1,16 +1,27 @@
-import React from 'react'
-import {Link} from 'react-router-dom'
+import React from 'react';
+import { Link } from 'react-router-dom';
+
 export const Home = () => {
   return (
-    <div>
-        <div className='bg-cover bg-center bg-[url(https://images.unsplash.com/photo-1586805372042-327a923a697a?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTZ8fHRyYWZmaWN8ZW58MHx8MHx8fDA%3D)] h-screen pt-8 flex justify-between flex-col w-full bg-red-400'>
-          <img className='w-16 ml-8' src="https://upload.wikimedia.org/wikipedia/commons/c/cc/Uber_logo_2018.png" alt="" />
-            <div className='bg-white pb-7 py-5 px-4' >
-                <h2 className='text-3xl font-bold'>Get started with uber </h2>
-               <Link to='/login' className='flex justify-center items-center w-full bg-black text-white py-3 rounded mt-4'>Continue</Link>
-            </div>
+    <div className="h-screen w-full bg-cover bg-center bg-no-repeat" 
+      style={{ backgroundImage: "url('https://images.unsplash.com/photo-1586805372042-327a923a697a?w=1000&auto=format&fit=crop&q=60')" }}>
+      
+      {/* Uber Logo */}
+      <div className="pt-8">
+        <img className="w-25 ml-8 " src="https://upload.wikimedia.org/wikipedia/commons/c/cc/Uber_logo_2018.png" alt="Uber Logo" />
+      </div>
 
-        </div>
+      {/* Content Box */}
+      <div className="absolute bottom-0 left-0 w-full bg-white p-6 text-center shadow-lg rounded-t-lg">
+        <h2 className="text-3xl font-bold">Get started with Uber</h2>
+        
+        {/* Continue Button */}
+        <Link to="/login" className="inline-block mt-4">
+          <button className="bg-red-500 hover:bg-red-600 text-white font-semibold px-6 py-3 rounded-lg shadow-md flex items-center gap-2 transition-all duration-300">
+            Continue <span>→</span>
+          </button>
+        </Link>
+      </div>
     </div>
-  )
-}
+  );
+};
