@@ -81,7 +81,7 @@ export const CaptainSignup = () => {
         onChange={(e) => setPassword(e.target.value)}
       />
       <button className="bg-[#111] text-[#fff] font-semibold mb-4 rounded px-4 py-2 w-full text-lg">
-        Login
+        Create account
       </button>
     </form>
 
